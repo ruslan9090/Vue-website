@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>VERSUS</title>
+    
+</head>
+<body>
+
+<div id="app">
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                
+                <div class="header__logo"  id="logo">
+                    {{ logo }}
+                </div>
+
+                <nav class="nav">
+                    <a class="nav__link" href="#">Portfolio</a>
+                    <a class="nav__link" href="#">About</a>
+                    <a class="nav__link" href="#">Contact</a>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+            
+
+    <div class="intro">
+        <div class="container">
+            <div class="intro__inner">
+                <h1 class="intro__title">
+                    {{ intro__title }}
+                </h1>
+
+                <a class="btn" v-bind:href="link" v-bind:class="{ btn_black: btn.IsDark }">{{btn.title}}</a>
+            </div>
+        </div>
+    </div>
+            
+
+    <div class="works">
+        <div class="container">
+            <div class="works__inner"> 
+                <h3 class="works__title">{{ works__title }}</h3>
+                <div class="works__photo">
+                    <img class="works__item" v-for="work in works" v-bind:src="work.img" v-bind:id="work.id">
+                </div>      
+            </div>
+
+            <div class="footer">
+                <div class="footer__inner">
+                    <p class="footer__logo">{{ logo }}</p>
+                    <p class="footer__write">{{ footer__write }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<script src="/project.vue"></script>
+
+
+</body>
+</html>
